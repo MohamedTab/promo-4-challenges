@@ -9,3 +9,32 @@ require_relative "wagon_sort"
 
 # TODO: Then call `wagon_sort` method defined in the wagon_sort.rb
 #       file and display the sorted student list
+students = []
+student = "khgvlkj"
+  while student != ""
+    puts "ajouter un étudiant"
+    student = gets.chomp
+    if student != ""
+      students.push(student)
+    else
+      puts "ajouter un étudiant"
+end
+  end
+
+number = students.length
+liste = wagon_sort(students)
+
+
+    puts "Congratulations! Your Wagon has #{number} student :
+    #{liste}"
+
+
+
+
+
+
+
+
+
+
+
