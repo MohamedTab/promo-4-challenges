@@ -4,6 +4,6 @@ puts "comment ca va?"
 my_message = gets.chomp
 
 while my_message != ""
-  puts coach_answer(my_message)
+  puts coach_answer_enhanced(my_message)
   my_message = gets.chomp
 end

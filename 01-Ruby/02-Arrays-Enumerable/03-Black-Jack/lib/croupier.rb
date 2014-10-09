@@ -26,12 +26,13 @@ def play_game
  player_score == 0
 
   while player_score <= bank_score
+    state_of_the_game(player_score, bank_score)
     puts "card? (type 'y' or 'yes' for a new card)"
       answer = gets.chomp
       if answer == "y" || response == "yes"
         player_score = player_score + pick_player_card
       else
-        return "lose"
+        state_of_the_game(player_score, bank_score)
      end
   end
 end

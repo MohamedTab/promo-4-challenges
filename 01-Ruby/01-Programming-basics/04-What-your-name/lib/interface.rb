@@ -18,4 +18,3 @@ last_name = gets.chomp
 puts "Hello, #{compute_name(first_name, middle_name, last_name)}"
 
 
-
