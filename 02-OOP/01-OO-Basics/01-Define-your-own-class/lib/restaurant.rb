@@ -7,4 +7,4 @@ class Restaurant
   end
 end
 
-# mac = Restaurant.new("fast food", 10, "bastille")
+#
