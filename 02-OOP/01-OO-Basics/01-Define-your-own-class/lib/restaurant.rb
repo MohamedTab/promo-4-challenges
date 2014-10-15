@@ -3,7 +3,7 @@ class Restaurant
   attr_writer :name
   def initialize(opening_hour, closing_hour, name)
     @opening_hour = opening_hour
-    @closing_hour = opening_hour
+    @closing_hour = closing_hour
     @name = %w(a b c d)
   end
 
