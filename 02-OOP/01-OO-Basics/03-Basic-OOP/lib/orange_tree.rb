@@ -7,6 +7,7 @@ class OrangeTree
     @pick_a_fruit = 0
     @fruits = 0
     @dead = false
+    @probability = []
   end
 
   def fruitsperyear
@@ -28,8 +29,15 @@ class OrangeTree
   def dead?
     if @age <= 50
       @dead = false
-    elsif @age > 100
-      @dead = true
+    elsif @age > 50 && @age < 100
+      (100 - @age).times do |b|
+        @probability << [true, false].sample
+      end
+        if @probability.all? { |a| a == true }
+          @dead = true
+        else
+          @dead = true
+        end
     else
       @dead = true
     end
