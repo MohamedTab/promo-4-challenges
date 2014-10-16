@@ -1,5 +1,4 @@
 class Dessert
-
   attr_reader :name, :calories
   def initialize(name, calories)
     @calories = calories
