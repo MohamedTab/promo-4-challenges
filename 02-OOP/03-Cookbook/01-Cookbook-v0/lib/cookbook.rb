@@ -7,7 +7,7 @@ class Cookbook
     @recipes = []
     @csv_path = csv_path
     csv_options = { col_sep: ',', quote_char: '"' }
-    CSV.foreach(csv_path, csv_options) do |row|
+    CSV.foreach(csv_path, csv_options) do
       @recipes << Recipe.new(:name, :description)
     end
   end
@@ -23,11 +23,11 @@ class Cookbook
   def remove_recipe(index)
     @recipes.delete_at(index)
     csv_options = { col_sep: ',', force_quotes: true, quote_char: '"' }
-      CSV.open(@csv_path, 'w', csv_options) do |csv|
-        @recipes.each do |recipe|
-          csv << [recipe.name, recipe.description]
-        end
+    CSV.open(@csv_path, 'w', csv_options) do |csv|
+      @recipes.each do |recipe|
+        csv << [recipe.name, recipe.description]
       end
+    end
   end
 end
 

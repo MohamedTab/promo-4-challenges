@@ -17,7 +17,7 @@ class Controller
   end
 
   def detroy(index)
-  @recipes.delete(index)
-  @recipes
+    @recipes.delete(index)
+    @recipes
   end
 end
