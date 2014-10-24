@@ -60,7 +60,7 @@ class Post
     b = DB.execute("SELECT * FROM posts")
     d = []
     b.each do |c|
-      d << Post.new(id: c[0], title: c[1], url: c[2], date: Time.at(c[3]), votes: c[4])
+      d << Post.new(id: c[0], title: c[1], url: c[2], date: Time.at(c[3]), votes)
     end
     d
   end
