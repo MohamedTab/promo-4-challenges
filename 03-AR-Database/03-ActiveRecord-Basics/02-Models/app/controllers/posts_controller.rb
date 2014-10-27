@@ -16,9 +16,10 @@ class PostsController
   def create
     # DO NOT WRITE SQL QUERIES
     # TODO: create a post
-    Post_data = @view.ask_for_post
+    post_data = @view.ask_for_post
     post.name = post_data[0]
     post.url = post_data[1]
+    post = Post.new(title: post_data[0], url: post_data[1])
     post.save
     @view.print_successfully_created(post)
   end
