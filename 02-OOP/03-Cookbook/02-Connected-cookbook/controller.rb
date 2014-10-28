@@ -1,4 +1,6 @@
 require_relative "view"
+require_relative 'cookbook'
+require_relative 'recipe'
 
 class Controller
   def initialize(cookbook)
@@ -13,7 +15,6 @@ class Controller
 
   def create
     name = @view.ask_for_recipe_name
-    description = @view.ask_for_recipe_description
     recipe = Recipe.new(name, description)
     @Cookbook.add_recipe(recipe)
   end
@@ -21,5 +22,10 @@ class Controller
   def detroy
     @recipes.delete(index)
     @recipes
+  end
+
+  def web_import
+    Marmiton.new(:key_word)
+    @cookbook.add_recipe(recipe)
   end
 end

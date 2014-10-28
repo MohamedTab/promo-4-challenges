@@ -2,14 +2,13 @@
 require 'csv'
 
 class Cookbook
-  attr_reader :recipes
-
+  attr_reader :recipes, :add_recipe, :remove_recipe
   def initialize(csv_path)
     @recipes = []
     @csv_path = csv_path
     csv_options = { col_sep: ',', quote_char: '"' }
     CSV.foreach(csv_path, csv_options) do
-      @recipes << Recipe.new(name, description)
+      @recipes << Recipe.new(:name, :description)
     end
   end
 
