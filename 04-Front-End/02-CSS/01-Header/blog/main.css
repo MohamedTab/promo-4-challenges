@@ -1,5 +1,27 @@
 .container {
   margin: 0 auto;
   width: 720px;
-	font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
+
+h1 {
+  text-align: center;
+}
+
+header ul {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted black;
+}
+
+header li {
+  display: inline-block;
+  text-align: center;
+  margin: 0 20px;
+}
+
+footer {
+    border-top : 1px dotted black;
+    padding: 10px 0;
+}
+
