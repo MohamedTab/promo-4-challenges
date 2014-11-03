@@ -1,3 +1,20 @@
 <h1>Hacker News</h1>
+<!-- Loop over collections to outpu some ruby string again -->
+<form action="/create_post" method="post"> <!-- on lui envoi des donnée -->
+<input type="text" name="name" placeholder="enter name for your post">
+<input type="text" name="url" placeholder="enter name for your url">
+<input type="text" value="enter name for your url">
+<button> Create post </button>
+</form>
+<%= posts.count %>
+<ul>
+ <% @posts.each do |post| %>
+   <li>
+   <a href="/post/<%= post.id %>/voteup">Vote up </a>
+   <%= posts.vote %>
+   <a href="<%= post.url %>"><%= post.name %></a>
+   </li>
+ <% end %>
+</ul>
 
 # TODO: list posts here. You can use instance variables set in the controller (app.rb)
