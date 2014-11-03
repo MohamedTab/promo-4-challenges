@@ -1,0 +1,66 @@
+body {
+  background-image: url('grid.jpg')
+}
+#header {
+  padding-top: 180px;
+  padding-bottom: 240px;
+  background-image: url("background.jpg");
+  background-size: cover;
+}
+
+h1 {
+  font-size: 75px;
+  color: white;
+}
+
+h2 {
+  color: white;
+}
+/*.grey_transparent {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-right: 0px;
+}
+*/
+.content {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+#newsletter > p {
+  padding: 15px;
+  font-size: 25px;
+}
+
+#newsletter {
+  padding-bottom: 60px;
+}
+
+.text_lien p{
+  padding: 10px;
+  font-size: 15px;
+}
+
+#footer {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  background-color: #222;
+  color: white;
+  font-size: 15px;
+}
+
+#footer a {
+  color: white;
+}
+
+#footer li {
+  font-size: 20px;
+}
+
+.grey_transparent {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content_about {
+  padding-top: 130px;
+  padding-bottom: 140px;
+}
